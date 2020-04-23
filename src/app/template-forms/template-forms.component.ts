@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TemplateFormsComponent implements OnInit {
 
-  emails = ['', 'naser@consultant.io', '', 'test@gm.com',
+  emails = ['', 'naser@consultant.biz', '', 'test@gm.com',
     '', 'contractor@uiux.biz'];
 
   model = new Data('some', this.emails[0], 'Angular Template Driven Forms');
@@ -26,6 +26,9 @@ export class TemplateFormsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+  refresh(): void {
+    window.location.reload();
   }
 
 }

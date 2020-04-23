@@ -14,7 +14,7 @@
           <input autocomplete="off" type="text" class="form-control" id="name" required [(ngModel)]="model.name"
             name="name" placeholder="Minimum 5 charaters" #name="ngModel" minlength="5">
           <div [hidden]="name.valid || name.dirty" class="alert alert-danger">
-            Please enter a name (Minimum 5 characters)!
+            Please enter a minimum of 5 characters
           </div>
         </div>
       </div>
@@ -40,7 +40,7 @@
             <option *ngFor="let mls of emails" [value]="mls"> {{mls}} </option>
           </select>
           <div [hidden]="myEmails.valid" class="alert alert-danger">
-            No e-mail address selected. Please, choose from the dropdown at right -->
+            No e-mail address selected. Please, choose from the dropdown
           </div>
         </div>
       </div>
@@ -64,9 +64,7 @@
           <span class="font-weight-bold">Message: </span>{{textRes}}</p>
         <div>
           <span class="font-weight-bold">Email: </span> {{emailAddressRes}}</div>
-        <button class="sim-lnk">
-          <a href="http://localhost:4200/">Return to form</a>
-        </button>
+        <button class="sim-lnk" (click)="refresh()">Back to form</button>
       </div>
     </div>
   </div>
